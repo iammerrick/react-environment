@@ -10,11 +10,12 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "glob": "^7.1.1",
-    "jest": "^16.0.1"
+    "jest": "^16.0.1",
+    "webpack": "^1.13.2"
   },
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "babel src -d lib",
+    "build": "babel src/index.js --out-file dist/index.js && webpack",
     "test": "jest",
     "prepublish": "npm run clean && npm run build"
   },
