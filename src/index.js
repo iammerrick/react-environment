@@ -1,4 +1,4 @@
-const MODULE_NAME = 'react-environment';
+const MODULE_NAME = 'react-environment/dist/components';
 
 const removeElement = (path) => {
   if (path === null) return null;
