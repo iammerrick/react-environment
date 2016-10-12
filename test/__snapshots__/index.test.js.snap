@@ -1,4 +1,4 @@
-exports[`react-environment should /Users/Merrick/Developer/JavaScript/react-environment/test/fixtures/wrapping-log-component.js 1`] = `
+exports[`react-environment should todo-component.js 1`] = `
 "\'use strict\';
 
 Object.defineProperty(exports, \"__esModule\", {
@@ -11,8 +11,6 @@ var _react = require(\'react\');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactEnvironment = require(\'react-environment\');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }
@@ -21,40 +19,52 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Log = function (_React$Component) {
-  _inherits(Log, _React$Component);
+var MyApp = function (_React$Component) {
+  _inherits(MyApp, _React$Component);
 
-  function Log() {
-    _classCallCheck(this, Log);
+  function MyApp() {
+    _classCallCheck(this, MyApp);
 
-    return _possibleConstructorReturn(this, (Log.__proto__ || Object.getPrototypeOf(Log)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (MyApp.__proto__ || Object.getPrototypeOf(MyApp)).apply(this, arguments));
   }
 
-  _createClass(Log, [{
-    key: \'componentDidMount\',
-    value: function componentDidMount() {
-      console.log(this.props.message);
-    }
-  }, {
+  _createClass(MyApp, [{
     key: \'render\',
     value: function render() {
-      return null;
+      return _react2.default.createElement(
+        \'div\',
+        null,
+        _react2.default.createElement(
+          \'div\',
+          null,
+          \'My Application\'
+        ),
+        _react2.default.createElement(\'div\', null)
+      );
     }
   }]);
 
-  return Log;
+  return MyApp;
 }(_react2.default.Component);
 
+exports.default = MyApp;"
+`;
+
+exports[`react-environment should wrapping-log-component.js 1`] = `
+"\'use strict\';
+
+Object.defineProperty(exports, \"__esModule\", {
+  value: true
+});
+
+var _react = require(\'react\');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var MyApp = function MyApp() {
-  return _react2.default.createElement(
-    \'div\',
-    null,
-    _react2.default.createElement(
-      _reactEnvironment.Environment,
-      { environment: \'development\' },
-      _react2.default.createElement(Log, { message: \'Hello world!\' })
-    )
-  );
+  return _react2.default.createElement(\'div\', null);
 };
 
 exports.default = MyApp;"
