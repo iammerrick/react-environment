@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "react-environment",
   "description": "React Environment is a tool set for adding environment specific things that will be removed.",
   "repository": "iammerrick/react-environment",
